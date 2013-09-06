@@ -60,22 +60,47 @@ namespace Numbers_1_100
                 if (num1 >= 91)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                }
-                if (num1 >= 101)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                }
+                }              
                 Console.WriteLine(num1);
                 num1++;
             } //end of while loop
 
+
+
+
+            
+            while (num2 <= 100)
+            {
+                
+                Console.ForegroundColor = ConsoleColor.Blue;
+                 if(isOdd(num2))
+                {
+                    Console.WriteLine(num2);
+                }
+                num2++;
+                Console.ForegroundColor = ConsoleColor.Green;
+                if (isEven(num2))
+                {
+                    Console.WriteLine(num2);
+                }
+
+                num2++;
+                                                        
+               
+            }
+
         } //end of main class
 
             public static bool isOdd(int value) 
-            {
+            {                            
                 return value % 2 != 0;
             }
-                
+         
+
+            public static bool isEven(int value)
+            {
+                return value % 2 == 0;
+            }
 
     }
 }
